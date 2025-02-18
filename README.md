@@ -1,8 +1,8 @@
-# Viro Version 1.0.
+# Viro Version 1.0
 
 Viro the virtual, retro inspired, fully programable computer system for all of us that love retro systems but lack the space, tools, or required skills to create something physical.
 
-## Features.
+## Features
     Terminal
     Code Editor
     Assembly Language Instruction Set
@@ -68,7 +68,7 @@ Viro the virtual, retro inspired, fully programable computer system for all of u
     System: Remapped all keyboard shortcuts with generic names so that using them in other systems is more understandable.
     System: Removed screen resizing and additional improvements to the system script.
 
-## Screen Shots.
+## Screen Shots
 
 ![Screenshot 2025-02-19 at 3 43 16 am](https://github.com/user-attachments/assets/31311d96-6b2b-4907-9907-eb84ceedabc5)<br>
 ![Screenshot 2025-02-19 at 3 42 44 am](https://github.com/user-attachments/assets/47083fc3-89fd-4176-88c6-cf999bd0aa6d)<br>
