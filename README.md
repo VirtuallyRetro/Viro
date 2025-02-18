@@ -9,6 +9,7 @@ Viro the virtual, retro inspired, fully programable computer system for all of u
     Graphics and Sound SubSystems
     Font Editor
     Options Dialogs
+    Indepth Systems Manual
 
 ## Changes in Version 1.0
     Initial Version 1.0 Final Release Build.
