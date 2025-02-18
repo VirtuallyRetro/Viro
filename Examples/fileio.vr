@@ -1,0 +1,30 @@
+<VirtuallyRetro-File>
+<source>_start:
+	.ignorelocal
+	.debugmode
+	
+	lda #0.05
+	out sys.performance
+
+	lda "test.txt" ;Opens file
+	out file.io
+		
+mainloop:
+	in file.io ;Reads one byte from the file into A
+	jz exit
+	out
+		
+	jp mainloop
+
+exit:
+	brk
+
+;Resources
+	.link "test.txt"</source>
+<mem>1024</mem>
+<row>21</row>
+<col>9</col>
+<hash></hash>
+<scroll>0</scroll>
+<autorun>false</autorun>
+<fullscreen>false</fullscreen>

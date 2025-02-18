@@ -1,0 +1,90 @@
+<VirtuallyRetro-File>
+<source>_start:
+	.ignorelocal
+	jsr setup
+
+
+mainloop:
+	in key.code
+	cmp const_keyEnd
+	jz exit
+		
+	jp mainLoop
+
+exit:
+	brk
+
+
+_irq_subroutine:
+	push a
+
+	lda sn
+	inc
+	sta sn
+	
+	cmp #4
+	jgz skip
+	
+	lda #0
+	sta sn
+
+skip:
+	
+	lda sn
+	out screen.activebuffer
+
+	pop a
+	rti
+
+
+setup:
+	push a
+	lda const_lowres_mode
+	out screen.mode
+		
+	jsr drawscreens
+			
+	pop a
+	rts
+
+drawscreens:
+	push a
+
+	
+	lda #5
+	stc
+
+	outerLoop:
+		push c
+	
+		lda c
+		dec
+		sta r0
+		
+		out screen.activebuffer
+		_cleartextregion
+		
+		lda #1199
+		stc
+		innerLoop:
+			lda r0
+			out text.print
+		lp innerLoop
+
+		pop c
+	lp outerLoop
+
+	pop a
+	rts
+
+;Vars
+sn:
+	.data 0
+</source>
+<mem>1024</mem>
+<row>9</row>
+<col>1</col>
+<hash></hash>
+<scroll>0</scroll>
+<autorun>false</autorun>
+<fullscreen>false</fullscreen>
