@@ -15,9 +15,12 @@ Viro the virtual, retro inspired, fully programable computer system for all of u
 ## Changes in Version 1.1
     Binary Resolution adjusted to allow 32 and 64 bit. (64 Bit binary numbers are unsigned)
     Corrections of floats to Strings due to changes in Godot 4.4.
+    Fixed a bug in the editor find and replace system, due to changes in Godot 4.4.
     Hex constant can now be up to eight characters in length.
+    Set source changed flag on find and replace.
     System Error Screen now displays Stack Frame Count.
-    System Registers / stack frames are now automatically backed up and restored.
+    System Registers / stack frames are now automatically backed up and restored
+    when jumping to and from subroutines or IRQ’s.
     Updates for Godot 4.4.
 
 ## Changes in Version 1.0
