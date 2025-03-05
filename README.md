@@ -1,4 +1,4 @@
-# Viro Version 1.0
+# Viro Version 1.1
 
 Viro the virtual, retro inspired, fully programable computer system for all of us that love retro systems but lack the space, tools, or required skills to create something physical.
 
@@ -6,10 +6,19 @@ Viro the virtual, retro inspired, fully programable computer system for all of u
     Terminal
     Code Editor
     Assembly Language Instruction Set
+    Native Runtime Engine
     Graphics and Sound SubSystems
     Font Editor
     Options Dialogs
     Indepth Systems Manual
+
+## Changes in Version 1.1
+    Binary Resolution adjusted to allow 32 and 64 bit. (64 Bit binary numbers are unsigned)
+    Corrections of floats to Strings due to changes in Godot 4.4.
+    Hex constant can now be up to eight characters in length.
+    System Error Screen now displays Stack Frame Count.
+    System Registers / stack frames are now automatically backed up and restored.
+    Updates for Godot 4.4.
 
 ## Changes in Version 1.0
     Initial Version 1.0 Final Release Build.
@@ -69,12 +78,11 @@ Viro the virtual, retro inspired, fully programable computer system for all of u
     System: Removed screen resizing and additional improvements to the system script.
 
 ## Screen Shots
-
+![Screenshot 2025-03-05 at 11 09 23 am](https://github.com/user-attachments/assets/00ca6d61-1eb7-4eb2-8d61-83e4f2b8b079)<br>
 ![Screenshot 2025-02-19 at 3 43 16 am](https://github.com/user-attachments/assets/31311d96-6b2b-4907-9907-eb84ceedabc5)<br>
 ![Screenshot 2025-02-19 at 3 42 44 am](https://github.com/user-attachments/assets/47083fc3-89fd-4176-88c6-cf999bd0aa6d)<br>
 ![Screenshot 2025-02-19 at 3 42 30 am](https://github.com/user-attachments/assets/808b60ad-9ea7-4a61-a7d4-45030517b284)<br>
-![Screenshot 2025-02-19 at 3 41 25 am](https://github.com/user-attachments/assets/7d9715e2-be41-4369-bd71-c40543099409)<br>
-![Screenshot 2025-02-19 at 3 41 12 am](https://github.com/user-attachments/assets/018961b9-ad5a-49ac-afef-27e5170c82fc)
+![Screenshot 2025-02-19 at 3 41 25 am](https://github.com/user-attachments/assets/7d9715e2-be41-4369-bd71-c40543099409)
 
 
 
