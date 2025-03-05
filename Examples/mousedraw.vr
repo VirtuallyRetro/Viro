@@ -7,7 +7,6 @@
 
 
 mainloop:
-
 	in key.code
 	jsrnz keyTest
 	
@@ -28,8 +27,6 @@ mainloop:
 
 
 keyTest:
-	push a
-
 	in key.Code
 	cmp #99 ;c key
 	jsrz clearScreen
@@ -53,7 +50,6 @@ keyTest:
 endKeyTest:
 	in
 
-	pop a
 	rts
 
 reset:
@@ -66,8 +62,6 @@ clearScreen:
 	rts
 
 drawpoint:
-	push a
-
 	in mouse.X
 	pds a
 	in mouse.y
@@ -77,12 +71,9 @@ drawpoint:
 	lda #0
 	out mouse.buttonClicked
 
-	pop a
 	rts
 
 drawpointwithreset:
-	push a
-
 	in mouse.X
 	pds a
 	in mouse.y
@@ -93,12 +84,9 @@ drawpointwithreset:
 	lda #0
 	out mouse.buttonClicked
 
-	pop a
 	rts
 	
 setup:
-	push a
-	
 	lda const_lowres_mode
 	out screen.mode
 
@@ -118,12 +106,11 @@ setup:
 	out color.background
 	_clearGraphicsRegion
 
-	pop a
 	rts	</source>
 <mem>1024</mem>
-<row>5</row>
+<row>107</row>
 <col>0</col>
 <hash></hash>
-<scroll>0</scroll>
+<scroll>76</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>

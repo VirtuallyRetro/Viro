@@ -49,8 +49,6 @@ skip:
 
 
 centerupdate:
-	push a
-
 	in mouse.x
 	sta x
 	in mouse.y
@@ -66,7 +64,6 @@ centerupdate:
 	rnd
 	sta s
 
-	pop a
 	rts
 
 
@@ -97,9 +94,9 @@ s:
 ngondata:
 	.data -10,-10,10,-10,10,10,-10,10</source>
 <mem>1024</mem>
-<row>81</row>
+<row>50</row>
 <col>0</col>
 <hash></hash>
-<scroll>59</scroll>
+<scroll>40</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>

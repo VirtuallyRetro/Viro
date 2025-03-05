@@ -29,8 +29,6 @@ exit:
 
 ;Redraw the maze but only updated elements	
 refreshmaze:
-	push a
-	
 	;set forground color
 	lda const_clightgrey
 	out color.foreground
@@ -90,26 +88,21 @@ refreshmaze:
 		pop c
 	lp y_loop
 	
-	pop a
-rts
+	rts
 
 ;Clears the area of the single element
 ;modifies the A register
 clear:
-	push a
 	pds x
 	pds y
 	pds #8
 	pds #8
 	call const_graphics, const_gClearRect
-	pop a
-rts
+	rts
 
 
 ;Draws the initial maze and stores the data
 drawinitialmaze:
-	push a
-
 	;set forground color
 	lda const_cwhite
 	out color.foreground
@@ -161,13 +154,11 @@ drawinitialmaze:
 		pop c
 	lp y_loopi
 
-	pop a
-rts
+	rts
 
 
 ;Modifies the A register
 drawright:
-	push a
 	lda x
 	add #7
 	pds a
@@ -177,12 +168,10 @@ drawright:
 	add #7
 	pds a
 	call const_graphics, const_gline
-	pop a
-rts
+	rts
 
 ;Modifies the A register
 drawleft:
-	push a
 	pds x
 	pds y
 	lda x
@@ -192,13 +181,10 @@ drawleft:
 	add #7
 	pds a
 	call const_graphics, const_gline
-	pop a
-rts
+	rts
 
 ;Modifies the A Register
 setup:
-	push a
-		
 	.title "Maze Demo"
 	
 	;lda #10
@@ -211,8 +197,8 @@ setup:
 	out color.background
 	
 	jsr drawinitialmaze
-	pop a
-rts
+
+	rts
 
 	brk
 
@@ -229,9 +215,9 @@ y:
 maze_data:
 	.alloc 1200</source>
 <mem>2048</mem>
-<row>33</row>
-<col>20</col>
+<row>21</row>
+<col>8</col>
 <hash></hash>
-<scroll>21</scroll>
+<scroll>0</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>

@@ -31,8 +31,6 @@ sort:
 
 ;---------------------------
 printData:
-	push a
-			
 	lda #100
 	stc
 printLoop:
@@ -46,14 +44,11 @@ printLoop:
 	lda #10
 	out
 	out
-	
-	pop a
+
 	rts
 
 ;---------------------------
 fillBuffer:
-	push a
-		
 	lda #100
 	stc
 fillloop:
@@ -62,8 +57,7 @@ fillloop:
 	pds #sortData
 	call const_memoryBlocks, const_mbWrite
 	lp fillLoop
-	
-	pop a
+
 	rts
 
 ;---------------------------
@@ -71,9 +65,9 @@ fillloop:
 sortdata:
 	.alloc 100</source>
 <mem>1024</mem>
-<row>8</row>
-<col>15</col>
+<row>58</row>
+<col>0</col>
 <hash></hash>
-<scroll>0</scroll>
+<scroll>33</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>

@@ -50,8 +50,6 @@ endKeyTest:
 
 
 pause:
-	push a
-	
 	in mouse.buttonClicked
 	cmp #1
 	jz skipPause
@@ -64,60 +62,45 @@ pause:
 
 	skipPause:
 	
-	pop a
-rts
+	rts
 
 clearscreen:
 	_clearGraphicsRegion
 rts
 
 change_color:
-	push a
 	lda #63
 	rnd
 	out color.foreground
-	pop a
 	rts
 
 mouseup:
-	push a
 	;finalise the lineto
 	call const_graphics, const_glinetoReset
 	
 	;Clear the mouse click
 	lda #0
 	out mouse.buttonClicked
-	pop a
 	rts
 
 mousedown:
-	push a
 	in mouse.x
 	pds a
 	in mouse.y
 	pds a
 	call const_graphics,  const_glineto
-	pop a
 	rts
 
 setup:
-	push a
-			
 	lda const_lowRes_mode
 	out screen.mode
-		
-	;lda const_cBlack
-	;out color.background
-	;_cls
-	
-	pop a
 	rts
 
 </source>
 <mem>1024</mem>
-<row>69</row>
-<col>21</col>
+<row>61</row>
+<col>0</col>
 <hash></hash>
-<scroll>52</scroll>
+<scroll>40</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>

@@ -68,21 +68,16 @@ endkeyTest:
 
 
 printCustomStringInRegion:
-	push a
-	
 	lda #63
 	out color.foreground
 	
 	lda #message
 	out text.print
 	
-	pop a
 	rts
 
 
 printCustomString:
-	push a
-	
 	lda #63
 	out color.foreground
 	
@@ -91,12 +86,9 @@ printCustomString:
 	pds #0
 	call const_text, const_tLinePrint
 	
-	pop a
 	rts
 
 createTextRegion:
-	push a
-
 	lda #16
 	out color.background
 	_cls
@@ -126,13 +118,10 @@ createTextRegion:
 	call const_text, const_tGetTextRegionHeight
 	sta r1
 
-	pop a
 	rts
 
 
 rkey:
-	push a
-	
 	_cls
 	call const_text, const_tResetTextRegion
 		
@@ -142,8 +131,6 @@ rkey:
 	call const_text, const_tGetTextRegionHeight
 	sta r1
 	
-	
-	pop a
 	rts
 
 
@@ -163,18 +150,13 @@ homekey:
 
 
 space:
-	push a
-	
 	lda #32
 	out
-	
-	pop a
+
 	rts
 
 
 chars:
-	push a
-	
 	lda #63
 	rnd
 	out color.foreground
@@ -183,13 +165,10 @@ chars:
 	add #32
 	out
 	
-	pop a
 	rts
 
 	
 setup:
-	push a
-	
 	lda #0.5
 	out sys.performance
  	
@@ -198,7 +177,6 @@ setup:
 	
 	jsr createTextRegion
 	
-	pop a
 	rts
 	
 	brk
@@ -207,9 +185,9 @@ message:
 	.data 72,101,108,108,111,32,87,111,114,108,100,33,33	
 </source>
 <mem>1024</mem>
-<row>2</row>
-<col>1</col>
+<row>90</row>
+<col>0</col>
 <hash></hash>
-<scroll>0</scroll>
+<scroll>83</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>

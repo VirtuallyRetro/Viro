@@ -8,7 +8,7 @@ mainLoop:
 	in key.code
 	jsrnz keytest
 	
-	in mouse.button_clicked
+	in mouse.buttonClicked
 	jz skip
 
 	in mouse.x
@@ -39,7 +39,7 @@ mainLoop:
 skipdc:
 			
 	lda #0
-	out mouse.button_clicked
+	out mouse.buttonclicked
 	
 	jsr drawScreen
 					
@@ -56,19 +56,14 @@ exit:
 	
 	
 keyTest:
-	push a
-	
 	in
 	cmp const_KeyEnd
 	jz exit
-	
-	pop a
 	rts
 	
 	
 drawScreen:
-	
-	lda const_clightgray
+	lda const_clightgrey
 	out color.foreground
 	
 	pds #160
@@ -77,7 +72,7 @@ drawScreen:
 	pds a
 	in mouse.y
 	pds a
-	call const_graphics,  const_gLine
+	call const_graphics, const_gLine
 		
 	lda const_cWhite
 	out color.foreground
@@ -86,20 +81,20 @@ drawScreen:
 	pds #110
 	pds #160
 	pds #130
-	call const_graphics,  const_gLine
+	call const_graphics, const_gLine
 	
 	pds #150
 	pds #120
 	pds #170
 	pds #120
-	call const_graphics,  const_gLine
+	call const_graphics, const_gLine
 	
 	in mouse.x
 	pds a
 	in mouse.y
 	pds a
 	pds #5
-	call const_graphics,  const_gCircle
+	call const_graphics, const_gCircle
 	
 	lda r0
 	out text.print
@@ -114,9 +109,9 @@ message:
 	
 </source>
 <mem>1024</mem>
-<row>24</row>
-<col>11</col>
+<row>40</row>
+<col>17</col>
 <hash></hash>
-<scroll>0</scroll>
+<scroll>23</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>

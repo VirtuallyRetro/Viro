@@ -33,13 +33,10 @@ exit:
 	brk
 	
 keyTest:
-	push a
-	
 	in
 	cmp const_KeyEnd
 	jz exit
-	
-	pop a
+
 	rts
 	
 
@@ -72,9 +69,9 @@ ngondata:
 	
 	</source>
 <mem>1024</mem>
-<row>15</row>
-<col>27</col>
+<row>37</row>
+<col>0</col>
 <hash></hash>
-<scroll>0</scroll>
+<scroll>24</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>

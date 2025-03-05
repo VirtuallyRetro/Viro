@@ -34,7 +34,6 @@ exit:
 ;------------------------
 
 bubbleSort:
-	pusha
 	
 sortStart:
 	lda false
@@ -73,14 +72,12 @@ skipFlip:
 	lda flip
 	jnz sortStart
 
-	popa
 	rts
 
 
 ;------------------------
 
 printData:
-	push a
 	
 	lda #sortdata
 	sta lvp
@@ -101,7 +98,6 @@ printLoop:
 	out
 	out
 	
-	pop a
 	rts
 
 	brk
@@ -109,8 +105,6 @@ printLoop:
 ;------------------------
 
 fillBuffer:
-	push a
-
 	lda #sortData
 	sta lvp
 
@@ -127,7 +121,6 @@ fillloop:
 
 	lp fillLoop
 
-	pop a
 	rts
 
 ;------------------------
@@ -144,9 +137,9 @@ uvp:
 sortdata:
 	.alloc 100</source>
 <mem>1024</mem>
-<row>3</row>
-<col>8</col>
+<row>124</row>
+<col>0</col>
 <hash></hash>
-<scroll>0</scroll>
+<scroll>99</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>

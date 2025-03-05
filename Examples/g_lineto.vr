@@ -23,8 +23,6 @@ exit:
 
 ;----------------------------------	
 keyTest:
-	push a
-	
 	in key.Code
 	cmp #32
 	jsrz clearScreen
@@ -33,15 +31,10 @@ keyTest:
 	cmp const_keyEnd
 	jz exit
 	
-	pop a
 	rts
-
-	nop
 
 ;----------------------------------
 drawLine:
-	push a
-
 	lda #320
 	rnd
 	pds a
@@ -51,7 +44,6 @@ drawLine:
 		
 	call const_graphics, const_gLineTo
 	
-	pop a
 	rts
 
 ;----------------------------------		
@@ -62,19 +54,15 @@ clearScreen:
 	
 ;----------------------------------		
 randomColor:
-	push a
-	
 	lda #63
 	rnd
 	out color.foreground
-	
-	pop a
+
 	rts</source>
 <mem>1024</mem>
-<row>48</row>
-<col>5</col>
+<row>33</row>
+<col>0</col>
 <hash></hash>
-<scroll>34</scroll>
+<scroll>15</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>
-<fontpath></fontpath>

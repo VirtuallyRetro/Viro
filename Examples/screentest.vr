@@ -16,8 +16,6 @@ exit:
 
 
 _irq_subroutine:
-	push a
-
 	lda sn
 	inc
 	sta sn
@@ -33,24 +31,18 @@ skip:
 	lda sn
 	out screen.activebuffer
 
-	pop a
 	rti
 
 
 setup:
-	push a
 	lda const_lowres_mode
 	out screen.mode
 		
 	jsr drawscreens
-			
-	pop a
+
 	rts
 
 drawscreens:
-	push a
-
-	
 	lda #5
 	stc
 
@@ -74,7 +66,6 @@ drawscreens:
 		pop c
 	lp outerLoop
 
-	pop a
 	rts
 
 ;Vars
@@ -82,9 +73,9 @@ sn:
 	.data 0
 </source>
 <mem>1024</mem>
-<row>9</row>
-<col>1</col>
+<row>67</row>
+<col>0</col>
 <hash></hash>
-<scroll>0</scroll>
+<scroll>42</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>

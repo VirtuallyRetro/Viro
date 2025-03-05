@@ -36,60 +36,44 @@ exit:
 	brk
 
 checkKeys:
-	push a
-	
 	in key.code
 	cmp #32
 	jsrz softirq
 	
-	
-	
 	in
 	cmp const_KeyEnd
 	jz exit
-		
-	pop a
+
 	rts
-
-
 
 softirq:
 	irq
 	rts
 
 timer2:
-	push a
 	lda #50
 	out
-	pop a
 	rts
 
 
 timer1:
-	push a
 	lda #49
 	out
-	pop a
 	rts
 
 timer:
-	push a
 	lda #48
 	out
-	pop a
 	rts
 
 _irq_subroutine:
-	push a
 	lda #46
 	out
-	pop a
 	rti</source>
 <mem>1024</mem>
-<row>2</row>
-<col>1</col>
+<row>47</row>
+<col>0</col>
 <hash></hash>
-<scroll>0</scroll>
+<scroll>38</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>
-<fontpath></fontpath>

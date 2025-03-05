@@ -30,17 +30,16 @@ loop:
 	brk
 
 addnumber:
-	push a
 	lda r0
 	add c
 	sta r0
-	pop a
 	rts
+
 </source>
 <mem>1024</mem>
-<row>3</row>
-<col>11</col>
+<row>35</row>
+<col>0</col>
 <hash></hash>
-<scroll>0</scroll>
+<scroll>5</scroll>
 <autorun>false</autorun>
 <fullscreen>false</fullscreen>
